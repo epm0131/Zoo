@@ -1,0 +1,29 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "TIY: getting some practice with writing constructor functions and prototypes:  Creating a zoo with the a base of \"Creature\" and then having a specific type of \"species\".",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epm0131/Zoo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epm0131/Zoo/issues"
+  },
+  "homepage": "https://github.com/epm0131/Zoo#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
