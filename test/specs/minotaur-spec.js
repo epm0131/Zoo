@@ -9,10 +9,21 @@
     });
 
     describe('The constructor for setting up Creature', function() {
-      xit('should be an object', function() {
-        expect(window.zoo.Creature).to.be.an('object');
-      });
+      it('should create a Creature', function() {
+        expect(new window.zoo.Creature('Matt')).to.be.an('object');
     });
-  });
 
+      it('should produce an error if no string is given', function() {
+        try {
+          new window.zoo.Creature(5);
+          expect(true).to.be.false;
+        } catch(err) {
+          console.log(typeof err);
+          expect(err).to.be.an.instanceof(Object);
+          expect(err).to.be.an.instanceof(TypeError);
+        }
+      });
+
+  });
+});
 }());

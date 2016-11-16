@@ -9,15 +9,24 @@
     this.dob = dob || 'not alive';
   }
 
+  Creature.prototype.getAge = function getAge() {
+    var currentDate = Date.now();
+    console.log(currentDate);
+    var creatureDob = this.dob;
+    console.log(creatureDob);
+  };
+
   var draco = new Creature('draco', 1603);
 
+  draco.getAge();
+
   function Dragon(name, dob) {
-    Creature.apply( this, [name] );
-    this.dob = dob;
+    Creature.apply( this, [name, dob] );
   }
 
   Dragon.prototype = Object.create(Creature.prototype);
   Dragon.prototype.constructor = Dragon;
+  Dragon.prototype.breed ='Dragon';
 
   Dragon.prototype.layEgg = function layEgg() {
     var babyDragon = new Dragon('drago', 2016);
