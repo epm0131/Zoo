@@ -3,29 +3,24 @@
 
   window.zoo = window.zoo || {};
   window.zoo.Dragon = Dragon;
+  var createCreature = window.zoo.Creature;
 
-  function Creature(name, dob) {
-    console.log(this);
-    this.name = name || 'nameless';
-    this.dob = dob || 'not alive';
-  }
-
-  Creature.prototype.getAge = function getAge() {
+  createCreature.prototype.getAge = function getAge() {
     var currentDate = Date.now();
     console.log(currentDate);
     var creatureDob = this.dob;
     console.log(creatureDob);
   };
 
-  var draco = new Creature('draco', 1603);
+  var draco = new createCreature('draco', 1603);
 
   draco.getAge();
 
   function Dragon(name, dob) {
-    Creature.apply( this, [name, dob] );
+    createCreature.apply( this, [name, dob] );
   }
 
-  Dragon.prototype = Object.create(Creature.prototype);
+  Dragon.prototype = Object.create(createCreature.prototype);
   Dragon.prototype.constructor = Dragon;
   Dragon.prototype.breed ='Dragon';
 

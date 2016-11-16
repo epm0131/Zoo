@@ -36,10 +36,12 @@
 
       describe('The constructor for setting up minions', function() {
         it('should create a dragon', function() {
-          expect(new window.zoo.Dragon('Ember')).to.be.an('object');
+          expect(new window.zoo.Dragon('Ember', 10000)).to.be.an('object');
         });
-      });
-
+        it('should create a minotaur', function() {
+          expect(new window.zoo.Minotaur('Horns', 500)).to.be.an('object');
+        });
+      });  
   });
 });
 }());

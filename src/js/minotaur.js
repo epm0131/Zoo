@@ -2,36 +2,16 @@
   'use strict';
 
   window.zoo = window.zoo || {};
-  window.zoo.Creature = Creature;
   window.zoo.Minotaur = Minotaur;
-  /**
-   * this is the constructor for setting up creature.
-   * @param {string} name this is the name of the creature
-   * @param {date} dob  this is the dob of the creature
-   */
-  function Creature(name, dob) {
+  var createCreature = window.zoo.Creature;
 
-    if(typeof(name) !== 'string') {
-      var err = new TypeError('Hello....You should give a string');
-      throw err;
-    }
-
-    if(typeof(dob) !== 'number') {
-      var err1 = new TypeError('Hello....You should give a number');
-      throw err1;
-    }
-    console.log(this);
-    this.name = name || 'nameless';
-    this.dob = dob || 'not alive';
-  }
-
-  var daedalus = new Creature('daedalus', 1234);
+  var daedalus = new createCreature('daedalus', 1234);
 
   function Minotaur(name, dob) {
-    Creature.apply( this, [name, dob] );
+    createCreature.apply( this, [name, dob] );
   }
 
-  Minotaur.prototype = Object.create(Creature.prototype);
+  Minotaur.prototype = Object.create(createCreature.prototype);
   Minotaur.prototype.constructor = Minotaur;
   Minotaur.prototype.breed ='Minotaur';
 
