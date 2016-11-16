@@ -15,6 +15,11 @@
       var err = new TypeError('Hello....You should give a string');
       throw err;
     }
+
+    if(typeof(dob) !== 'number') {
+      var err1 = new TypeError('Hello....You should give a number');
+      throw err1;
+    }
     console.log(this);
     this.name = name || 'nameless';
     this.dob = dob || 'not alive';
@@ -40,7 +45,8 @@
     return 'Charge!!!!!!!!!!!!';
   };
 
-  var minotaur = new Minotaur('daedalus', '1234');
+
+  var minotaur = new Minotaur('daedalus', 1234);
 
   console.log('daedalus:', daedalus);
   console.log(minotaur.giveBirth());

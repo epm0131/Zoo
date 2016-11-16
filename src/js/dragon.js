@@ -2,6 +2,7 @@
   'use strict';
 
   window.zoo = window.zoo || {};
+  window.zoo.Dragon = Dragon;
 
   function Creature(name, dob) {
     console.log(this);
