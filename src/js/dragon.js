@@ -3,19 +3,16 @@
 
   window.zoo = window.zoo || {};
   window.zoo.Dragon = Dragon;
-  var createCreature = window.zoo.Creature;
 
-  createCreature.prototype.getAge = function getAge() {
-    var currentDate = Date.now();
-    console.log(currentDate);
-    var creatureDob = this.dob;
-    console.log(creatureDob);
-  };
+  var createCreature = window.zoo.Creature;
 
   var draco = new createCreature('draco', 1603);
 
-  draco.getAge();
-
+  /**
+   * This constructor creates a Dragon
+   * @param {string} name this is the name of the creature
+   * @param {date} dob  this is the dob of the creature
+   */
   function Dragon(name, dob) {
     createCreature.apply( this, [name, dob] );
   }

@@ -3,11 +3,19 @@
   window.zoo = window.zoo || {};
   window.zoo.Creature = Creature;
 
+  Creature.prototype.getAge = function getAge() {
+    var currentDate = Date.now();
+    console.log(currentDate);
+    var creatureDob = this.dob;
+    console.log(creatureDob);
+  };
+
   /**
    * this is the constructor for setting up creature.
    * @param {string} name this is the name of the creature
-   * @throws {TypeError} If the argument is not an array or number
    * @param {date} dob  this is the dob of the creature
+   * @throws {TypeError} If the argument is not an array or number
+
    */
   function Creature(name, dob) {
 
@@ -24,5 +32,7 @@
     this.name = name || 'nameless';
     this.dob = dob || 'not alive';
   }
+
+
 
 }());

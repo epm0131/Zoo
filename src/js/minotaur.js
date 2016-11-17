@@ -6,7 +6,11 @@
   var createCreature = window.zoo.Creature;
 
   var daedalus = new createCreature('daedalus', 1234);
-
+  /**
+   * This constructor creates a Minotaur
+   * @param {string} name this is the name of the creature
+   * @param {date} dob  this is the dob of the creature
+   */
   function Minotaur(name, dob) {
     createCreature.apply( this, [name, dob] );
   }
